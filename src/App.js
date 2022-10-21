@@ -40,7 +40,7 @@ function App() {
     //setTodoList(newTodoList);
 
     const task={
-      id: todoList.length ===0 ? 1 :   todoList[todoList.length-1].id+1,
+      id: todoList.length == 0 ? 1 :   todoList[todoList.length-1].id+1,
       taskName: newTask,
       completed: false,
     };
@@ -100,7 +100,7 @@ function App() {
         {/* in react when we use a function on click that uses some parameters we have to put it like ()=>funciton, so it call a function that does a certain task. */}
       </div>
       <div className="list">
-        {todoList.map((task) => { return  <Task 
+        {todoList && todoList.map((task) => { return  <Task 
           taskName={task.taskName} 
           id={task.id} 
           completed={task.completed}
