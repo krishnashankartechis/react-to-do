@@ -12,7 +12,7 @@ function App() {
   });
 
 
-  const [newTask, setNewTask] = useState("");
+  const [newTask, setNewTask] = useState([]);
 
 
 
@@ -100,15 +100,15 @@ function App() {
         {/* in react when we use a function on click that uses some parameters we have to put it like ()=>funciton, so it call a function that does a certain task. */}
       </div>
       <div className="list">
-        {todoList.map((task) => {
-          // return (<div><h1> {task.taskName} </h1><button onClick={()=> deleteTask(task.id)}>X</button></div>);
-          return ( 
-          <Task 
+        {todoList.map((task) => { return  <Task 
           taskName={task.taskName} 
           id={task.id} 
           completed={task.completed}
           deleteTask={deleteTask} 
-          completeTask={completeTask} />);
+          completeTask={completeTask} />
+          // return (<div><h1> {task.taskName} </h1><button onClick={()=> deleteTask(task.id)}>X</button></div>);
+          
+         
         })}
       </div>
     </div>
