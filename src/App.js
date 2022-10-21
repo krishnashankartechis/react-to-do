@@ -40,7 +40,7 @@ function App() {
     //setTodoList(newTodoList);
 
     const task={
-      id: todoList.length == 0 ? 1 :   todoList[todoList.length-1].id+1,
+      // id: todoList.length == 0 ? 1 :   todoList[todoList.length-1].id+1,
       taskName: newTask,
       completed: false,
     };
